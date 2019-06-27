@@ -1,14 +1,19 @@
-package saiyajin;
+package br.com.danidr7.domain;
 
-import org.bson.Document;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.NotNull;
 import java.util.Set;
 
-public class Saiyajin extends Document {
+@Document
+public class Saiyajin {
 
     @Id
     private String id;
+    @Indexed(unique = true)
+    @NotNull
     private String name;
     private int age;
     private int maxLeval;
