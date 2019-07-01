@@ -1,12 +1,12 @@
-package controller;
+package br.com.danidr7;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application {
+public class SaiyajinApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(SaiyajinApplication.class, args);
     }
 }
