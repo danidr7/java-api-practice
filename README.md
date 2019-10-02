@@ -18,15 +18,15 @@ These tools must be installed:
 ### Project Targets
 
 
-`make build`: Builds a *.jar* on */targets* directory
-`make clean`: Removes the */targets* directory
-`make start`: Starts the project locally
-`make start-mongodb`: Starts a MongoDB container
-`make stop-mongodb`: Stops and removes the MongoDB container
-`make test`: starts a MongoDB container, test and removes the MongoDB container
-`make docker-build`: builds a docker image
-`make docker-run`: runs the built image
-`make docker-compose-up`: runs the project and the MongoDB with Docker Compose
+- `make build`: Builds a *.jar* on */targets* directory
+- `make clean`: Removes the */targets* directory
+- `make start`: Starts the project locally
+- `make start-mongodb`: Starts a MongoDB container
+- `make stop-mongodb`: Stops and removes the MongoDB container
+- `make test`: starts a MongoDB container, test and removes the MongoDB container
+- `make docker-build`: builds a docker image
+- `make docker-run`: runs the built image
+- `make docker-compose-up`: runs the project and the MongoDB with Docker Compose
 
 ### Usage Sample
 
