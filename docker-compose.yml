@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  java-api:
+    build: .
+    environment:
+      - SPRING_DATA_MONGODB_URI=mongodb://mongo-service/test
+    ports:
+      - 11000:11000
+    depends_on:
+      - mongo-service
+  mongo-service:
+    image: mongo
+    ports:
+      - 27017:27017
