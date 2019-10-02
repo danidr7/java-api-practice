@@ -10,8 +10,8 @@ RUN mvn clean package -U -DskipTests
 
 FROM openjdk:8-jre-slim-buster
 
-COPY --from=build /usr/src/app/target/java-api-template*.jar ./java-api-template.jar
+COPY --from=build /usr/src/app/target/java-api-practice*.jar ./java-api-practice.jar
 
 EXPOSE 11000
 
-ENTRYPOINT ["java", "-jar", "java-api-template.jar"]
+ENTRYPOINT ["java", "-jar", "java-api-practice.jar"]
