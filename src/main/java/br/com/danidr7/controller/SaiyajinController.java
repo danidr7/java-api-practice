@@ -7,7 +7,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -42,11 +41,12 @@ public class SaiyajinController {
     public Saiyajin getSaiyajins(@RequestParam String name) {
         logger.info("Find for {} saiyajin", name);
 
-        Saiyajin saiyajin = new Saiyajin();
+        Saiyajin saiyajin;
         try {
             saiyajin = saiyajinService.getSaiyajin(name);
         } catch (Exception e) {
             logger.error("fails attempting get a saiyajin", e);
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage());
         }
 
         return saiyajin;
